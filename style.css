@@ -1,0 +1,54 @@
+
+/* class selector
+    commonly styled things that you use */
+.heading {
+
+
+}
+
+* {
+    background-color: green;
+}
+
+/* ID selector */
+#dating-profile-name{
+    color: red
+}
+
+/* pseudo-classes */
+.heading:hover{
+    color: purple
+}
+
+li:first-of-type {
+    color: red
+}
+
+li:nth-child(3){
+    color: red;
+}
+
+li:nth-child(even){
+    border-bottom: 2px solid black;
+}
+
+/* Combinators 
+    space = child element with class 
+    no space = has both classes 
+    + = adjacent sibling 
+    > = direct child */
+
+.intro .heading{
+    /* all elements with heading class inside intro class */
+    background-color: black;
+}
+
+/* no space requires both classes to be stated*/
+.intro.section {
+    background-color: green;
+}
+
+html, body{
+    margin: 0;
+}
+
