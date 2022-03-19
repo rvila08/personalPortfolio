@@ -1,54 +1,105 @@
-
-/* class selector
-    commonly styled things that you use */
-.heading {
-
-
-}
-
 * {
-    background-color: green;
+  box-sizing: border-box;
 }
 
-/* ID selector */
-#dating-profile-name{
-    color: red
+body {
+  height: 100%;
+  margin: 0;
 }
 
-/* pseudo-classes */
-.heading:hover{
-    color: purple
+html {
+  background: linear-gradient(180deg, #3f87a6, #ebf8e1, #f69d3c);
+  height: 100%;
 }
 
-li:first-of-type {
-    color: red
+p.title {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 30px;
+  font-family: "Poppins";
 }
 
-li:nth-child(3){
-    color: red;
+.grid {
+  width: 100%;
+  display: grid;
+  position: relative;
+  grid-template-columns: 30px 1fr 30px;
+  grid-template-rows: 0.5fr 1fr 1fr 0.8fr;
+  grid-template-areas:
+    "header header header"
+    "left-gutter pins right-gutter"
+    "left-gutter pins right-gutter"
+    "gutter gutter gutter";
 }
 
-li:nth-child(even){
-    border-bottom: 2px solid black;
+article {
+  width: 30%;
+  height: 50%;
+  position: relative;
+  border-style: 5px solid black;
 }
 
-/* Combinators 
-    space = child element with class 
-    no space = has both classes 
-    + = adjacent sibling 
-    > = direct child */
-
-.intro .heading{
-    /* all elements with heading class inside intro class */
-    background-color: black;
+.outside {
+  animation: fade-in 5s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
 }
 
-/* no space requires both classes to be stated*/
-.intro.section {
-    background-color: green;
+.inside {
+  /* apply our keyframe animation */
+  animation: fade-in 1s;
+  animation-delay: 1s; /* notice what this does without the property below */
+  animation-fill-mode: both;
 }
 
-html, body{
-    margin: 0;
+button {
+  position: absolute;
+  width: 40px;
+  bottom: 15px;
+  right: 5px;
+  border-radius: 10px;
+  font-size: 10px;
 }
 
+.pin img {
+  border-radius: 15px;
+  width: 95%;
+  height: 95%;
+  object-fit: scale-down;
+}
+
+.container {
+  grid-area: pins;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+pre {
+  margin-top: 20px;
+  grid-area: gutter;
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins";
+  overflow: none;
+}
+
+div {
+  grid-area: pins;
+  height: 5%;
+  width: 100%;
+}
+
+p.caption {
+  text-align: center;
+  padding: 20px;
+  grid-area: gutter;
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins";
+  overflow: none;
+}
