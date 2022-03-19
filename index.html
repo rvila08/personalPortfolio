@@ -1,86 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Hello World</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Your name">
-  <meta name="description" content="Brief description">
-
-  <!-- Open Graph Metadata-->
-  <meta property="og:title" content="Your Page Title">
-  <meta property="og:description" content="Brief description">
-  <meta property="og:image" content="/some-image.png">
-  <meta property="og:url" content="/this-page.html">
-  <meta property="og:site_name" content="Your Site Name">
-
-  <!-- Specific to twitter-->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image:alt" content="image description">
-
-  <!-- Links our CSS stylesheet-->
-  <link href="style.css" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-</head>
-<body>
-  <h1>Hello World!</h1>
-  <script src="script.js"></script>
-  <p> 
-      P tags are used for paragraphs, and most
-      of the meat of your site's conetent will be in a p tag
-      <strong>Use to emphasize something</strong>
-  </p>
-  <pre>
-      This will preserve the text as I write it in HTML
-  </pre>
-
-  <!-- Lists-->
-  <ul>
-      <li>Unordered lists are for collections of items </li>
-      <li>were the order does not matter </li>
-  </ul>
-
-  <ol>
-      <li>Ordered lists are good for things with an inherent order</li>
-      <li>things like search results, recipes</li>
-  </ol>
-
-  <!-- Media Related Elements-->
-
-  <!-- 
-    Always have to specify a source
-    Always have an alt tag if image has meaningful info 
-    If no meaningful info, not required but blank alt="" needed
-
-  -->
-
-  <img src="https://images.unsplash.com/photo-1615233500064-caa995e2f9dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z29sZGVuJTIwcmV0cmlldmVyJTIwcHVwcHl8ZW58MHx8MHx8&w=1000&q=80" alt="This is the alt attribute"/>
-  <svg>
-
-  </svg>
-
-  <figure>
-    <img src="https://images.unsplash.com/photo-1615233500064-caa995e2f9dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z29sZGVuJTIwcmV0cmlldmVyJTIwcHVwcHl8ZW58MHx8MHx8&w=1000&q=80" alt="This is the alt attribute"/>
-    <figcaption>
-      Beautiful cute doggo
-    </figcaption>
-  </figure>
-  <!-- Interactive Elements -->
-  Click <a href = "https://stripe.com">here </a> for the Stripe Website
-  <button>This button with perform an action</button>
-
-  <!-- Grouping Tags -->
-  <div></div> <!-- Only use divs when no other element makes sense-->
-
-  <header></header>
-  <main></main>
-  <footer></footer>
-  <nav></nav>
-
-  <section></section>
-
-  <span></span>
-
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Static Template</title>
+    <link href="style.css" rel="stylesheet"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:ital,wght@0,100;0,200;1,200&display=swap" rel="stylesheet">
+    <style>
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+    <body class="grid">
+        <p class = "title">Ricky Vila</p>
+        <section class = "container">
+          <article class = "pin outside">
+            <img src="https://cdn1.iconfinder.com/data/icons/instagram-ui-colored/48/JD-03-512.png" alt="">
+            <a href="https://github.com/rvila08/instainfo">
+              <button class = "link">Go</button>
+            </a>
+          </article>
+          <article class = "pin inside">
+            <img src="headshot.png" alt="">
+          </article>
+          <article class = "pin outside">
+              <img src="https://www.pngmart.com/files/12/Flappy-Bird-PNG-Photos.png" alt="">
+              <a href="https://github.com/rvila08/flappyBird"> 
+                <button class = "link">Go</button>
+              </a>
+          </article>
+          <div></div>
+          <article class = "pin outside">
+            <img src="https://www.freeiconspng.com/thumbs/sql-server-icon-png/sql-server-icon-png-7.png" alt="">
+            <a href="https://github.com/rvila08/salarydatabase"> 
+              <button class = "link">Go</button>
+            </a>
+          </article>
+          <article class = "pin outside">
+            <img src="pythonlogo.png" alt="">
+            <a href="https://github.com/rvila08/leaguestats"> 
+              <button class = "link">Go</button>
+            </a>
+          </article>
+          <article class = "pin outside">
+            <img src="javalogo.png" alt="">
+            <button class = "link">Go</button>
+          </article>
+        </section>
+        <p class = "caption"> Hi, my name is Ricky Vila. I'm a Data Analytics
+          and Economics double major attending Chapman University. Here are some of my coding projects. Thanks for checking it out! </p>
+    </body>
 </html>
-
